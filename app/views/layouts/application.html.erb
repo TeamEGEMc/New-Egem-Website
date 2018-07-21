@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      <meta name="description" content="A complete landing page solution for any business">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Ξthergem | ΞGEM</title>
+      
+    <!-- Favicon -->
+    <%= favicon_link_tag 'favicon/favicon.ico' %>
+    
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+   
+  </head>
+
+  <body>
+  <!-- Menu Partials -->
+  <%= render 'layouts/navigation' %>
+  
+   <%= yield %>
+  
+  <!-- Footer Partials -->
+  <%= render 'layouts/footer' %>
+    
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="scribbler.js"></script>
+          <link rel="stylesheet" href="scribbler-landing.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800,900" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/railscasts.min.css">
+      <link rel="stylesheet" href="scribbler-global.css">
+  </body>
+</html>
