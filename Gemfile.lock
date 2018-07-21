@@ -117,6 +117,8 @@ GEM
       mini_portile2 (~> 2.3.0)
     nokogiri (1.8.2-x64-mingw32)
       mini_portile2 (~> 2.3.0)
+    pg (1.0.0)
+    pg (1.0.0-x64-mingw32)
     popper_js (1.12.9)
     public_suffix (3.0.2)
     puma (3.11.4)
@@ -215,6 +217,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   font-awesome-rails
   jbuilder (~> 2.5)
+  pg
   puma (~> 3.7)
   rails (~> 5.1.5)
   sass-rails (~> 5.0)
