@@ -217,6 +217,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   font-awesome-rails
   jbuilder (~> 2.5)
+  nokogiri
   pg
   puma (~> 3.7)
   rails (~> 5.1.5)
