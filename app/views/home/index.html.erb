@@ -6,7 +6,7 @@
                   <p class="u-fs-22 text-purple u-lh-1_8 py-4">
                      Built upon the reliable go-ethereum protocol for a rock solid base trusted by thousands of people all around the world!
                   </p>
-                  
+
                </div>
                <div class="col-lg-12 mx-auto mt-5">
                 <div class="box">
@@ -68,81 +68,31 @@
             </div>
          </div>
       </section>
-      <section id="features" class="bg-yellow">
+      <section id="eras" class="bg-white">
          <div class="container">
             <div class="row">
-               <div class="col-lg-6 m-auto text-center">
+               <div class="col-lg-6 m-auto text-center style=">
                   <h2 class="h1">
-                     Features that Make Your Project Stand Out!
+                   Eras
                   </h2>
-                  <div class="u-h-4 u-w-50 bg-primary rounded mt-4 u-mb-40 mx-auto"></div>
+                  <div class="u-h-4 u-w-50 bg-primary rounded mt-10 u-mb-40 mx-auto"></div>
+                   <button id="button" class="button" style="vertical-align:middle"><span>Eras</span></button>
+                   <button type="button" class="btn btn-success"
+                                                       data-toggle="modal" data-target="#myModal">
+                                                       Launch demo modal
+                                               </button>
+                 </div>
+                </div>
                </div>
-            </div>
-            <div class="row mt-5">
-               <div class="col-lg-4">
-                  <div class="tabs tabs-v1 text-center">
-                     <h4 class="u-mb-15 d-inline-block d-lg-block">
-                        <a href="#tab1" class="bg-white p-4 d-flex rounded box-shadow-v3 bg-primary text-white" data-toggle="tab" role="tab">
-                        <span class="icon icon-Tools color-white u-fs-36 mr-lg-3"></span>
-                        <span class="d-none d-lg-block">Easy to Customize</span>
-                        </a>
-                     </h4>
-                     <h4 class="u-mb-15 d-inline-block d-lg-block">
-                        <a href="#tab2" class="bg-white p-4 d-flex rounded" data-toggle="tab" role="tab">
-                        <span class="icon icon-MessageLeft color-primary u-fs-36 mr-lg-3"></span>
-                        <span class="d-none d-lg-block">Unlimited Support</span>
-                        </a>
-                     </h4>
-                     <h4 class="u-mb-15 d-inline-block d-lg-block">
-                        <a href="#tab3" class="bg-white p-4 d-flex rounded" data-toggle="tab" role="tab">
-                        <span class="icon icon-Starship2 color-primary u-fs-36 mr-lg-3"></span>
-                        <span class="d-none d-lg-block">Clean Code</span>
-                        </a>
-                     </h4>
-                     <h4 class="u-mb-15 d-inline-block d-lg-block">
-                        <a href="#tab4" class="bg-white p-4 d-flex rounded" data-toggle="tab" role="tab">
-                        <span class="icon icon-Magnet color-primary u-fs-36 mr-lg-3"></span>
-                        <span class="d-none d-lg-block">UI Elements</span>
-                        </a>
-                     </h4>
-                     <h4 class="u-mb-15 d-inline-block d-lg-block">
-                        <a href="#tab5" class="bg-white p-4 d-flex rounded" data-toggle="tab" role="tab">
-                        <span class="icon icon-Notebook color-primary u-fs-36 mr-lg-3"></span>
-                        <span class="d-none d-lg-block">Fully Responsive</span>
-                        </a>
-                     </h4>
-                  </div>
-               </div>
-               <div class="col-lg-7 ml-auto">
-                  <div class="tab-content">
-                     <div class="tab-pane fade show active" id="tab1" role="tabpanel">
-                     <%=image_tag("software/s-2.jpg",class:"box-shadow-v1", alt: "")%>
-                        
-                     </div>
-                     <div class="tab-pane fade" id="tab2" role="tabpanel">
-                     <%=image_tag("software/s-3.jpg",class:"box-shadow-v1", alt: "")%>
-                     </div>
-                     <div class="tab-pane fade" id="tab3" role="tabpanel">
-                     <%=image_tag("software/s-4.jpg",class:"box-shadow-v1", alt: "")%>
-                     </div>
-                     <div class="tab-pane fade" id="tab4" role="tabpanel">
-                     <%=image_tag("software/s-2.jpg",class:"box-shadow-v1", alt: "")%>
-                     </div>
-                     <div class="tab-pane fade" id="tab5" role="tabpanel">
-                     <%=image_tag("software/s-3.jpg",class:"box-shadow-v1", alt: "")%>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </section>
-      <section>
-         <div class="container">
+              </section>
+              <%= render 'layouts/eras' %>
+              <section id="features" class="bg-yellow">
+             <div class="container">
             <div class="row">
-               <div class="col-lg-5 m-auto text-center">
-                  <h2 class="h1">
-                     The Ultimate Solution for Your Web App
-                  </h2>
+              <div class="col-lg-5 m-auto text-center">
+                <h2 class="h1">
+                  The Ultimate Solution for Your Web App
+                 </h2>
                   <div class="u-h-4 u-w-50 bg-primary rounded mt-4 u-mb-40 mx-auto"></div>
                </div>
             </div>
@@ -151,7 +101,7 @@
                   <div class="tab-content">
                      <div class="tab-pane fade show active" id="tab1_1" role="tabpanel">
                      <%=image_tag("software/s-4.jpg",class:"box-shadow-v1", alt: "")%>
-                       
+
                      </div>
                      <div class="tab-pane fade" id="tab1_2" role="tabpanel">
                      <%=image_tag("software/s-2.jpg",class:"box-shadow-v1", alt: "")%>
@@ -234,21 +184,22 @@
                            "slidesToScroll": 1,
                            "arrows":true,
                            "prevArrow":"<div class=\"slick-prev box-shadow-v1\"><i class=\"fa fa-angle-left\"></i></div>",
-                           "nextArrow":"<div class=\"slick-next box-shadow-v1\"><i class=\"fa fa-angle-right\"></i></div>", 
+                           "nextArrow":"<div class=\"slick-next box-shadow-v1\"><i class=\"fa fa-angle-right\"></i></div>",
                            "responsive": [
-                           { 
+                           {
                            "breakpoint":1024,
                            "settings":{
                            "arrows":false,
                            "dots":true,
                            "dotsClass":"slick-dots text-center mt-4"
                            }
-                           }					
+                           }
                            ]
                            }'>
-                           <li>
+                           <li><button id="button" class="button" style="vertical-align:middle"><span>Eras</span></button>
+So what now where the fck does this button belong on htis page Someone longer up  sofmel PSuot that code where it belongs
                            <%=image_tag("software/login.png",class:"w-100", alt: "")%>
-                              
+
                            </li>
                            <li>
                            <%=image_tag("software/dashboard.png",class:"w-100", alt: "")%>
@@ -264,16 +215,16 @@
                            "slidesToScroll": 1,
                            "arrows":true,
                            "prevArrow":"<div class=\"slick-prev box-shadow-v1\"><i class=\"fa fa-angle-left\"></i></div>",
-                           "nextArrow":"<div class=\"slick-next box-shadow-v1\"><i class=\"fa fa-angle-right\"></i></div>", 
+                           "nextArrow":"<div class=\"slick-next box-shadow-v1\"><i class=\"fa fa-angle-right\"></i></div>",
                            "responsive": [
-                           { 
+                           {
                            "breakpoint":1024,
                            "settings":{
                            "arrows":false,
                            "dots":true,
                            "dotsClass":"slick-dots text-center mt-4"
                            }
-                           }					
+                           }
                            ]
                            }'>
                            <li>
@@ -293,16 +244,16 @@
                            "slidesToScroll": 1,
                            "arrows":true,
                            "prevArrow":"<div class=\"slick-prev box-shadow-v1\"><i class=\"fa fa-angle-left\"></i></div>",
-                           "nextArrow":"<div class=\"slick-next box-shadow-v1\"><i class=\"fa fa-angle-right\"></i></div>", 
+                           "nextArrow":"<div class=\"slick-next box-shadow-v1\"><i class=\"fa fa-angle-right\"></i></div>",
                            "responsive": [
-                           { 
+                           {
                            "breakpoint":1024,
                            "settings":{
                            "arrows":false,
                            "dots":true,
                            "dotsClass":"slick-dots text-center mt-4"
                            }
-                           }					
+                           }
                            ]
                            }'>
                            <li>
@@ -322,16 +273,16 @@
                            "slidesToScroll": 1,
                            "arrows":true,
                            "prevArrow":"<div class=\"slick-prev box-shadow-v1\"><i class=\"fa fa-angle-left\"></i></div>",
-                           "nextArrow":"<div class=\"slick-next box-shadow-v1\"><i class=\"fa fa-angle-right\"></i></div>", 
+                           "nextArrow":"<div class=\"slick-next box-shadow-v1\"><i class=\"fa fa-angle-right\"></i></div>",
                            "responsive": [
-                           { 
+                           {
                            "breakpoint":1024,
                            "settings":{
                            "arrows":false,
                            "dots":true,
                            "dotsClass":"slick-dots text-center mt-4"
                            }
-                           }					
+                           }
                            ]
                            }'>
                            <li>
@@ -378,7 +329,7 @@
                </div>
                <div class="col-12 u-mt-80">
                <%=image_tag("software/s-6.png", alt: "")%>
-                  
+
                </div>
             </div>
          </div>
@@ -402,16 +353,16 @@
                      "prevArrow":"<div class=\"slick-prev box-shadow-v1\"><i class=\"fa fa-angle-left\"></i></div>",
                      "nextArrow":"<div class=\"slick-next box-shadow-v1\"><i class=\"fa fa-angle-right\"></i></div>",
                      "responsive": [
-                     { 
+                     {
                      "breakpoint":1024,
                      "settings":{
                      "slidesToShow": 2,
                      "arrows":false,
                      "dots":true,
-                     "dotsClass":"slick-dots text-center mt-4 dots-white" 
+                     "dotsClass":"slick-dots text-center mt-4 dots-white"
                      }
                      },
-                     { 
+                     {
                      "breakpoint":600,
                      "settings":{
                      "slidesToShow": 1,
@@ -419,10 +370,10 @@
                      "dots":true,
                      "dotsClass":"slick-dots text-center mt-4 dots-white"
                      }
-                     }						
+                     }
                      ]
                      }' data-slick-margin="15">
-                    
+
                         <div class="p-5 rounded bg-white">
                         <img alt="" src="/assets/person/Rid.jpg" class="rounded mx-auto d-block mb-4" style="width:90px;height:90px;padding:0px;">
                         <h4>
@@ -432,7 +383,7 @@
                            Core developer
                         </p>
                         <p>
-                           Nam liber tempor cum soluta nobis eleifend option congue is nihil imper per tem por legere me doming vulputate velit esse molestie possim. Ut wisi enim ad placerat facer.
+                          Software Developer, Crypto Enthusiast, Blockchain Developer.
                         </p>
                      </div>
                      <div class="p-5 rounded bg-white">
@@ -508,7 +459,7 @@
                         </p>
                        </div>
                         <div class="p-5 rounded bg-white">
-                       <img alt="" src="/assets/person/Jal3.jpg" class="rounded mx-auto d-block mb-4" style="width:90px;height:90px;padding:0px;">
+                       <img alt="" src="/assets/person/Cat.jpg" class="rounded mx-auto d-block mb-4" style="width:90px;height:90px;padding:0px;">
                         <h4>
                            Catsper
                         </h4>
@@ -516,7 +467,7 @@
                            Community developer
                         </p>
                          <p>
-                           Nam liber tempor cum soluta nobis eleifend option congue is nihil imper per tem por legere me doming vulputate velit esse molestie possim. Ut wisi enim ad placerat facer.
+                           Computer scientist, Mathematical physicist, Blockchain researcher.
                         </p>
                        </div>
                        <div class="p-5 rounded bg-white">
@@ -544,18 +495,6 @@
                         </p>
                        </div>
                        <div class="p-5 rounded bg-white">
-                        <img alt="" src="/assets/person/Jal3.jpg" class="rounded mx-auto d-block mb-4" style="width:90px;height:90px;padding:0px;">
-                        <h4>
-                           MakeMoneyOz
-                        </h4>
-                        <p class="text-muted">
-                           Community developer (Former core developer)
-                        </p>
-                         <p>
-                           Nam liber tempor cum soluta nobis eleifend option congue is nihil imper per tem por legere me doming vulputate velit esse molestie possim. Ut wisi enim ad placerat facer.
-                        </p>
-                       </div>
-                       <div class="p-5 rounded bg-white">
                        <img alt="" src="/assets/person/Stan.jpg" class="rounded mx-auto d-block mb-4" style="width:90px;height:90px;padding:0px;">
                         <h4>
                            Stanec
@@ -578,9 +517,7 @@
                          <p>
                            Nam liber tempor cum soluta nobis eleifend option congue is nihil imper per tem por legere me doming vulputate velit esse molestie possim. Ut wisi enim ad placerat facer.
                         </p>
-                       </div>
-
-
+                      </div>
                      </div>
                     </div>
                   </div>
@@ -594,19 +531,19 @@
             <div class="row">
                <div class="col-12 d-md-flex justify-content-between text-center">
                   <div class="p-3">
-                  <%=image_tag("", alt: "")%>
+                  <img alt="" src="" style="width:180px;height:40px;padding:0px;">
                   </div>
                   <div class="p-3">
-                  <%=image_tag("", alt: "")%>
+                  <img alt="" src="" style="width:180px;height:40px;padding:0px;">
                   </div>
                   <div class="p-3">
                   <img alt="" src="/assets/partner/BTFD-e628c5ff50c23e60926310cd3f1b7dfe1ba0a969de616e86058c2e6b4f4891d8.png" style="width:180px;height:40px;padding:0px;">
                   </div>
                   <div class="p-3">
-                  <%=image_tag("", alt: "")%>
+                  <img alt="" src="" style="width:180px;height:40px;padding:0px;">
                   </div>
                   <div class="p-3">
-                  <%=image_tag("", alt: "")%>
+                  <img alt="" src="" style="width:180px;height:40px;padding:0px;">
                   </div>
                </div>
             </div>
@@ -690,7 +627,7 @@
             <div class="row">
                <div class="col-lg-6 mx-auto text-center">
                   <h2 class="h1">
-                     Contact Us 
+                     Contact Us
                   </h2>
                   <div class="u-h-4 u-w-50 bg-primary rounded mt-4 u-mb-40 mx-auto"></div>
                   <p>
@@ -731,4 +668,9 @@
             </div>
          </div>
       </section>
-  
+      <%= csrf_meta_tags %>
+
+            <!-- Main css -->
+            <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+            <!-- Tables css -->

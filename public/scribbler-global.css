@@ -31,10 +31,11 @@ a, a:hover {
   color: var(--primary-color);
 }
 
-hr {
-  padding: 1rem 0;
-  border: 0;
-  border-bottom: 1px solid var(--bg-color);
+#hr {
+  #padding: 1rem 0;
+  #border: 0;
+  #color: #796aac;
+  #border-bottom: 1px solid;
 }
 
 * {
