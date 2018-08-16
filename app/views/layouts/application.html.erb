@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html>
   <head>
-      <meta charset="UTF-8">
-      <meta http-equiv="x-ua-compatible" content="ie=edge">
-      <meta name="description" content="A complete landing page solution for any business">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="Home of EtherGem, An ethereum network with a different view.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#8987DF">
       <title>Ξthergem | ΞGEM</title>
-      
+
     <!-- Favicon -->
     <%= favicon_link_tag 'favicon/favicon.ico' %>
-    
+
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -19,12 +20,12 @@
   <body>
   <!-- Menu Partials -->
   <%= render 'layouts/navigation' %>
-  
+
    <%= yield %>
-  
+
   <!-- Footer Partials -->
   <%= render 'layouts/footer' %>
-    
+
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <script src="scribbler.js"></script>
           <link rel="stylesheet" href="scribbler-landing.css">
