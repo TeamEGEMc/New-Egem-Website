@@ -1,7 +1,7 @@
 (function($){
   'use strict';
   var devdap = {
-    // Inverse header background when scroll 
+    // Inverse header background when scroll
     hederInverse: function(){
       $(window).on('scroll', function() {
           if ($(this).scrollTop() > 5) {
@@ -18,32 +18,33 @@
 				}
 			});
     },
-					
+
 			slickMargin: function(){
 				$('[data-slick-margin]').each(function(){
-					
+
 						var margin = $(this).data('slick-margin');
-					
+
 						$(this).find('.slick-list').css({
 							marginLeft:-margin,
 							marginRight:-margin
 						});
-					
+
 						$(this).find('.slick-slide').css({
 							marginLeft:margin,
 							marginRight:margin
 						});
-					
+
 				});
 			},
-					
+
 			hamburgarToggler: function(){
               $('.js-hamburger').on('click', function(){
                 $(this).toggleClass('is-active');
               });
 			},
-		
-	 
+
+
+
 
 			parallaxInit: function(){
 				if($(window).width() > 768 ){
@@ -56,17 +57,22 @@
 					});
 				}
 			},
-			
+
 			accordianToggleIcon: function(){
 				$(".accordion__title").on('click', function(){
 					$('.accordion__title.active').removeClass('active');
 					$(this).addClass('active');
 				});
 			},
-	  
-		
+
+      linkAutoClose: function(){
+        $('.navbar-nav>li>a').on('click', function(){
+          $('.navbar-collapse').collapse('hide');
+        });
+      },
+
 			// Smooth scroll to target element
-		
+
 			scrollTo: function(){
 					$('[data-scrollto]').on('click', function(){
 					var id = '#' + $(this).data('scrollto');
@@ -80,8 +86,8 @@
 					return false;
 				});
 			},
-		
-		// Tabs toggle 
+
+		// Tabs toggle
 		tabsToggle: function(){
 			$('.tabs a').click(function (e) {
 				$('.tabs a.active').removeClass('active box-shadow-v1');
@@ -90,7 +96,7 @@
 				$(this).addClass('active box-shadow-v1');
 			});
 		},
-		
+
   	/// Scroll to top
 		scrollTop: function(){
 			var documentOffsetHeight = document.body.offsetHeight;
@@ -110,22 +116,22 @@
 				return false;
 			});
 		},
-		
+
 		wowInit: function(){
 			var wow = new WOW(
 				{
-					boxClass:     'wow',     
+					boxClass:     'wow',
 					animateClass: 'animated',
-					offset:       0,         
-					mobile:       true,  
-					live:         true,       
-					scrollContainer: null 
+					offset:       0,
+					mobile:       true,
+					live:         true,
+					scrollContainer: null
 				}
 			);
 			wow.init();
 		},
-		
-		
+
+
 		isotop: function(){
 			$('.portfolio-filter').on('click', 'li', function(){
 				var filterValue = $(this).attr('data-filter');
@@ -136,7 +142,7 @@
 				});
 			});
 
-			var $portfolio = $('.portfolio'); 
+			var $portfolio = $('.portfolio');
 			$portfolio.imagesLoaded( function(){
 				$portfolio.isotope({
 					itemSelector : '.portfolio-item',
@@ -144,7 +150,7 @@
 				});
 			});
 		},
-		
+
 		postTab: function(){
 			$('.post-tab-list').on('click', 'a', function(e) {
 						e.preventDefault();
@@ -154,13 +160,13 @@
 						$('#' + tab).addClass('active');
 						$(this).addClass('active');
 
-				}); 
+				});
 		},
-		
+
 			typingText: function(){
 				if($('[data-type]').data('type') === undefined){
 					return false;
-				} 
+				}
 				var typedTxt = $('[data-type]').data('type').split(',');
 				var typed = new Typed('[data-type]', {
 					strings: typedTxt,
@@ -198,31 +204,31 @@
 		        });
 		    }
 		},
-		
-		
+
+
 		countDown: function(){
 			if(!$.fn.countdown) return;
 			$('[data-countdown]').each(function() {
 				var $this = $(this), finalDate = $(this).data('countdown');
 				$this.countdown(finalDate, function(event) {
-					 
-					if($this.find('.countdown-days').length > 0){ 
+
+					if($this.find('.countdown-days').length > 0){
 						$this.find('.countdown-days').text(event.strftime('%D'));
 					}
-					if($this.find('.countdown-hours').length > 0){ 
+					if($this.find('.countdown-hours').length > 0){
 						$this.find('.countdown-hours').text(event.strftime('%H'));
 					}
-					if($this.find('.countdown-minutes').length > 0){ 
+					if($this.find('.countdown-minutes').length > 0){
 						$this.find('.countdown-minutes').text(event.strftime('%M'));
 					}
-					if($this.find('.countdown-seconds').length > 0){ 
+					if($this.find('.countdown-seconds').length > 0){
 						$this.find('.countdown-seconds').text(event.strftime('%S'));
 					}
 				});
 			});
 		},
-		
-		// Init the main function 
+
+		// Init the main function
     init: function(){
 				devdap.hederInverse();
 				devdap.carouselsInit();
@@ -232,26 +238,27 @@
 				devdap.slickMargin();
 				devdap.scrollTo();
 				devdap.tabsToggle();
+        devdap.linkAutoClose();
 				devdap.scrollTop();
 				if(typeof wow == 'function'){
 					devdap.wowInit();
 				}
 				devdap.postTab();
-				devdap.isotop(); 
-			
+				devdap.isotop();
+
 			devdap.typingText();
 			devdap.BSprogressBar();
 			devdap.countDown();
 
     }
-		
-		
 
-  }; 
-	
-	
-	
-  
+
+
+  };
+
+
+
+
   devdap.init();
-  
+
 }(jQuery));
